@@ -18,7 +18,7 @@ This is a Python-based Weekly Report System with a graphical user interface (GUI
 
 ## Usage
 
-1. Run the main application by executing the Python script (`weekly_report_app.py`).
+1. Run the main application by executing the Python script (`main.py`).
 2. Use the "Add Task" section to input the task type and description, and then click the "Create Task" button to add a new task.
 3. View the list of tasks in the main application window. Each task has a checkbox to mark it as completed.
 4. Use the "Mark as Completed" button to toggle the completion status of selected tasks.
