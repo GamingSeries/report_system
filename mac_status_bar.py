@@ -2,8 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 from AppKit import NSApp, NSStatusBar, NSVariableStatusItemLength, NSImageNameInfo
 
-# Your existing code for adding tasks and the GUI goes here
-
 # Create a function to create the macOS status bar application
 def create_mac_status_bar_app():
     app = NSApp.sharedApplication()
