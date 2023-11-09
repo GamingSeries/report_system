@@ -1,1 +1,13 @@
 env
+'''
+main.spec
+'''
+# -*- mode: python ; coding: utf-8 -*-
+build
+'''
+dist
+'''
+*.pyc
+'''
+setup.py
+'''
