@@ -8,9 +8,13 @@ tasks = []
 def update_task_list():
     task_list.delete(0, tk.END)  # Clear the existing list
 
-    # Iterate through tasks and add them to the listbox with checkboxes
-    for i, (task, completed) in enumerate(tasks):
-        task_list.insert(tk.END, f"[{'X' if completed else ' '}] {task}")
+    # Sort tasks by priority
+    sorted_tasks = sorted(tasks, key=lambda x: x[0])
+
+    # Iterate through sorted tasks and add them to the listbox with checkboxes
+    for task in sorted_tasks:
+        task_list.insert(tk.END, f"[{'X' if task[2] else ' '}] {task[1]}")
+
 
 # Create a function to add a task
 def add_task():
@@ -18,7 +22,19 @@ def add_task():
     task_description = task_description_entry.get()
 
     if task_type and task_description:
-        tasks.append((f"{task_type}: {task_description}", False))  # Add the task with its completion status
+        # Determine the priority based on task type
+        if task_type == "Assignment":
+            priority = 1
+        elif task_type == "Lab Report":
+            priority = 2
+        elif task_type == "Quiz":
+            priority = 3
+        elif task_type == "Discussion":
+            priority = 4
+        else:
+            priority = 5  # Default for other types
+
+        tasks.append((priority, f"{task_type}: {task_description}", False))
         update_task_list()
         task_description_entry.delete(0, tk.END)  # Clear the task description entry
 
