@@ -1,4 +1,4 @@
-# Weekly Report System
+# Weekly Report System v1.0.0
 
 This is a Python-based Weekly Report System with a graphical user interface (GUI) for managing and tracking tasks. It allows you to add, list, and mark tasks as completed. Additionally, a macOS status bar application is provided for users who want the application to start at login and stay in the macOS menu bar.
 
